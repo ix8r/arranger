@@ -82,15 +82,11 @@ function expandBlocks(
             occurences[block.name] += 1
         }
 
-        for (let i = 0; i < block.length; i++) {
-            expanded.push({
-                name: block.name,
-                bars: 8,
-                consecutive: i,
-                occurence: occurences[block.name],
-                nextName: null
-            })
-        }
+        expanded.push({
+            name: block.name,
+            length: block.length,
+            occurence: occurences[block.name]
+        })
     }
 
     return expanded

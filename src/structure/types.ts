@@ -44,8 +44,6 @@ export type StructureTransitionBlock = {
 
 export type StructureBlock = {
     name: string,
-    bars: number, // 8
-    occurence: number,
-    consecutive: number,
-    nextName: string | null
+    length: number,
+    occurence: number
 }
