@@ -20,10 +20,10 @@ function determineLengths(data: StructureFile): { [key: string]: number } {
 
 function processBlock(
     block: StructureFileBlock,
-    lengths: { [key: string]: number }
+    lengths: { [key: string]: number },
+    skipOptional?: boolean
 ): StructureTransitionBlock[] {
-    // TODO: the optional on/off pattern should be the same for every "loop" iteration
-    if (block.optional && Math.random() >= 0.5) {
+    if (block.optional && Math.random() >= 0.5 && !skipOptional) {
         return []
     }
 
@@ -46,8 +46,20 @@ function processBlock(
 
         const count = rollLength(block.count)
 
+        const blockOptionality: boolean[] = Array(block.blocks.length).fill(true)
+        block.blocks.forEach((block, j) => {
+            if (block.optional) {
+                blockOptionality[j] = Math.random() >= 0.5
+            }
+        })
+
         for (let i = 0; i < count; i++) {
-            blocks.push(...processBlocks(block.blocks, lengths))
+            block.blocks.forEach((block, j) => {
+                if (!blockOptionality[j]) {
+                    return
+                }
+                blocks.push(...processBlock(block, lengths, true))
+            })
 
             if (i < count - 1 && block.infix) {
                 blocks.push(...processBlock(block.infix, lengths))
