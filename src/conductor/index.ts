@@ -1,9 +1,11 @@
-import { existsSync, readFileSync } from "fs"
+import { existsSync, readFileSync, writeFileSync } from "fs"
 import { StructureBlock } from "../structure/types"
+import { createLayerBlocks } from "./layers"
 import { createPointTargets } from "./points"
 
 export default (argv: {
-    structure: string
+    structure: string,
+    output?: string
 }) => {
     if (!existsSync(argv.structure)) {
         console.error(`Structure file ${argv.structure} not found.`)
@@ -15,4 +17,13 @@ export default (argv: {
     )
 
     const targets = createPointTargets(structure)
+
+    const layers = createLayerBlocks(targets)
+    const layersText = JSON.stringify(layers, null, 4)
+
+    if (!argv.output) {
+        console.log(layersText)
+    } else {
+        writeFileSync(argv.output, layersText, "utf8")
+    }
 }

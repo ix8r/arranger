@@ -1,4 +1,4 @@
-import { StructureBlock } from "../structure/types";
+import { StructureBlock } from "../structure/types"
 
 export type ConductorPointBlock = {
     name: string,

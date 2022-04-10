@@ -1,0 +1,452 @@
+[
+    {
+        "name": "intro",
+        "points": 2,
+        "layers": [
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "chords",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "intro",
+        "points": 3,
+        "layers": [
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "chords",
+                "complexity": 0
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 4,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 2
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 5,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 2
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 6,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 2
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            },
+            {
+                "name": "melody",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 7,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 3
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            },
+            {
+                "name": "melody",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 6,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 0
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 7,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 5,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 3
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 6,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 3
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 7,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 3
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            },
+            {
+                "name": "chords",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "verse",
+        "points": 8,
+        "layers": [
+            {
+                "name": "drums",
+                "complexity": 3
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 7,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 8,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "bridge",
+        "points": 2,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 1
+            }
+        ]
+    },
+    {
+        "name": "bridge",
+        "points": 3,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 2
+            }
+        ]
+    },
+    {
+        "name": "bridge",
+        "points": 4,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 2
+            },
+            {
+                "name": "drums",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "bridge",
+        "points": 5,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 2
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 8,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "chorus",
+        "points": 9,
+        "layers": [
+            {
+                "name": "melody",
+                "complexity": 1
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            },
+            {
+                "name": "drums",
+                "complexity": 1
+            },
+            {
+                "name": "chords",
+                "complexity": 1
+            },
+            {
+                "name": "arps",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "outro",
+        "points": 4,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 1
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "outro",
+        "points": 3,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            },
+            {
+                "name": "pads",
+                "complexity": 0
+            }
+        ]
+    },
+    {
+        "name": "outro",
+        "points": 2,
+        "layers": [
+            {
+                "name": "chords",
+                "complexity": 0
+            },
+            {
+                "name": "bass",
+                "complexity": 0
+            }
+        ]
+    }
+]

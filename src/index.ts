@@ -28,6 +28,12 @@ yargs(hideBin(process.argv))
                 alias: "s",
                 demandOption: true
             }
+        ).option(
+            "output", {
+                type: "string",
+                describe: "Output file",
+                alias: "o"
+            }
         )
     }, argv => conductor(argv))
     .parse()

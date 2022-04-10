@@ -41,10 +41,11 @@ export default (argv: {
     }
     
     const blocks = processTemplate(template)
+    const blocksText = JSON.stringify(blocks, null, 4)
 
     if (!argv.output) {
-        console.log(blocks)
+        console.log(blocksText)
     } else {
-        writeFileSync(argv.output, JSON.stringify(blocks), "utf8")
+        writeFileSync(argv.output, blocksText, "utf8")
     }
 }
