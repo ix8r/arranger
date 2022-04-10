@@ -111,10 +111,8 @@ function processBlocks(
     return blocks.map(block => processBlock(block, lengths)).flat()
 }
 
-export function processTemplate(data: StructureFile) {
+export function processTemplate(data: StructureFile): StructureBlock[] {
     const lengths = determineLengths(data)
 
-    const blocks = expandBlocks(processBlocks(data.blocks, lengths))
-
-    console.log(blocks)
+    return expandBlocks(processBlocks(data.blocks, lengths))
 }

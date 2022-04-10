@@ -1,4 +1,4 @@
-import { existsSync, readdirSync, readFileSync } from "fs"
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "fs"
 import { join } from "path"
 import { processTemplate } from "./algorithm"
 import { StructureFile } from "./types"
@@ -20,7 +20,8 @@ function getKnownTemplates(): StructureFile[] {
 }
 
 export default (argv: {
-    template?: string
+    template?: string,
+    output?: string
 }) => {
     let template: StructureFile
 
@@ -39,5 +40,11 @@ export default (argv: {
         template = knownTemplates[Math.floor(knownTemplates.length * Math.random())]
     }
     
-    processTemplate(template)
+    const blocks = processTemplate(template)
+
+    if (!argv.output) {
+        console.log(blocks)
+    } else {
+        writeFileSync(argv.output, JSON.stringify(blocks), "utf8")
+    }
 }
