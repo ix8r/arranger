@@ -34,6 +34,12 @@ yargs(hideBin(process.argv))
                 describe: "Output file",
                 alias: "o"
             }
+        ).option(
+            "visual", {
+                type: "boolean",
+                describe: "Output a visual representation instead of JSON",
+                alias: "v"
+            }
         )
     }, argv => conductor(argv))
     .parse()

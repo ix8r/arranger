@@ -1,6 +1,6 @@
 import { ConductorPointBlock } from "./points"
 
-const availableLayers = [
+export const availableLayers = [
     "drums", "bass", "chords",
     "arps", "pads", "melody"
 ]
