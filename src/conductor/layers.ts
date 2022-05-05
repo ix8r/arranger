@@ -1,9 +1,20 @@
+import select from "weighted"
 import { ConductorPointBlock } from "./points"
 
 export const availableLayers = [
     "drums", "bass", "chords",
-    "arps", "pads", "melody"
+    "arps", "pads"
 ]
+
+const layerWeights: {
+    [key: string]: number
+} = {
+    "drums": 5,
+    "bass": 3,
+    "chords": 3,
+    "arps": 3,
+    "pads": 3
+}
 
 const maxLayerComplexity = 3
 
@@ -41,8 +52,9 @@ function pickNewLayer(existingLayers: string[]) {
     }
 
     const pick = availableLayers.filter(s => !existingLayers.includes(s))
+    const weights = pick.map(layer => layerWeights[layer])
 
-    return pick[Math.floor(Math.random() * pick.length)]
+    return select(pick, weights)
 }
 
 function advanceLayers(layers: ConductorLayer[], target: number, pass = 0) {
@@ -55,9 +67,6 @@ function advanceLayers(layers: ConductorLayer[], target: number, pass = 0) {
     }
 
     if (pass < target) {
-        // TODO: This is quite ugly
-        //          Make it nicer.
-        //              Also, weights.
         while (calculateLayerPoints(layers) !== pass + 1) {
             const existingLayers = layers.map(layer => layer.name)
         
@@ -81,6 +90,10 @@ function advanceLayers(layers: ConductorLayer[], target: number, pass = 0) {
         advanceLayers(layers, target, pass + 1)
     } else if (pass > target) {
         const layer = layers[Math.floor(Math.random() * layers.length)]
+
+        if (!layer) {
+            return
+        }
 
         if (layer.complexity) {
             layer.complexity -= 1

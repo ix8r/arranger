@@ -19,19 +19,16 @@ function getKnownTemplates(): StructureFile[] {
     return knownTemplates
 }
 
-export default (argv: {
-    template?: string,
-    output?: string
-}) => {
+export function findTemplate(templateName?: string) {
     let template: StructureFile
 
-    if (argv.template) {
-        const templatePath = join(templatesDir, argv.template + ".json")
+    if (templateName) {
+        const templatePath = join(templatesDir, templateName + ".json")
 
         if (existsSync(templatePath)) {
             template = JSON.parse(readFileSync(templatePath, "utf-8"))
         } else {
-            console.error(`Template ${argv.template} not found.`)
+            console.error(`Template ${templateName} not found.`)
             process.exit(1)
         }
     } else {
@@ -39,7 +36,15 @@ export default (argv: {
 
         template = knownTemplates[Math.floor(knownTemplates.length * Math.random())]
     }
-    
+
+    return template
+}
+
+export default (argv: {
+    template?: string,
+    output?: string
+}) => {
+    const template = findTemplate(argv.template)
     const blocks = processTemplate(template)
     const blocksText = JSON.stringify(blocks, null, 4)
 

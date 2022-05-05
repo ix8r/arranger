@@ -1,5 +1,6 @@
 import yargs from "yargs"
 import { hideBin } from "yargs/helpers"
+import arranger from "./arranger"
 import conductor from "./conductor"
 
 import structure from "./structure"
@@ -42,4 +43,19 @@ yargs(hideBin(process.argv))
             }
         )
     }, argv => conductor(argv))
+    .command("$0", "generate full arranger data", yargs => {
+        return yargs.option(
+            "template", {
+                type: "string",
+                describe: "Song structure template",
+                alias: "t"
+            }
+        ).option(
+            "output", {
+                type: "string",
+                describe: "Output file",
+                alias: "o"
+            }
+        )
+    }, argv => arranger(argv))
     .parse()
